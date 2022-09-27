@@ -1,7 +1,11 @@
 /* Flexbox Part 1 */
 
 #flex-section1 ul {
-
+	display: flex;
+	justify-content: space-around;
+	padding: 0 2.5rem;
+	gap: 2rem;
+	list-style: none;
 }
 
 /* end Flexbox Part 1 */
@@ -10,11 +14,19 @@
 /* Flexbox Part 2 */
 
 #flex-section2 ul {
-
+	display: flex;
+	list-style: none;
+	flex: 1 1 0;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
 }
 
 #flex-section2 li {
-
+	display: flex;
+	list-style: none;
+	flex: 1 1 0;
+	justify-content: center;
 }
 
 #flex-section2 .item1 {
@@ -22,7 +34,7 @@
 }
 
 #flex-section2 .item2 {
-
+	order: 3;
 }
 
 #flex-section2 .item3 {
@@ -35,11 +47,17 @@
 /* Flexbox Part 3 */
 
 #flex-section3 .box {
-
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 #flex-section3 .tags ul {
-
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 /* end Flexbox Part 3 */
@@ -48,7 +66,10 @@
 /* Grid Part 1 */
 
 #grid-section1 .grid {
-
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 100px 100px;
+	gap: 1.25rem;
 }
 
 /* end Grid Part 1 */
@@ -57,11 +78,13 @@
 /* Grid Part 2 */
 
 #grid-section2 .gridboxblue {
-
+	grid-column: 2/4;
+	grid-row: 1/4;
 }
 
 #grid-section2 .gridboxred {
-
+	grid-column : 1/3;
+	grid-row: 2;
 }
 
 /* end Grid Part 2 */
@@ -70,23 +93,30 @@
 /* Grid Part 3 */
 
 #grid-section3 .grid {
-
+	display: grid;
+	gap: 0.625rem;
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: 100px 300px 100px;
+	grid-template-areas:
+	"one one"
+	"three two"
+	"four four"
 }
 
 #grid-section3 .box1 {
-
+	grid-area: one;
 }
 
 #grid-section3 .box2 {
-
+	grid-area: two;
 }
 
 #grid-section3 .box3 {
-
+	grid-area: three;
 }
 
 #grid-section3 .box4 {
-
+	grid-area: four;
 }
 
 /* end Grid Part 3 */
@@ -101,14 +131,16 @@
 	padding: 20px;
 	text-decoration: none;
 
-
+	/* Hover off */
+	transition: background-color 3s, color 3s;
 }
 
 #transition-section .box a:hover {
 	background-color: #cc0000;
 	color: #fff;
 
-
+	/* Hover on */
+	transition: background-color 0.5s, color 0.5s;
 }
 
 /* end Transition Part */
